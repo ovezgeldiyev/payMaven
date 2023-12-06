@@ -1,0 +1,309 @@
+.sidebar {
+  background-color: $white;
+  width: 252px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__inner {
+    padding: 25px 16px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        padding: 8px 40px 8px 16px;
+        position: relative;
+        color: $gray2;
+        border-radius: 8px;
+        margin-bottom: 17px;
+        &.notification {
+          b {
+            display: flex;
+          }
+        }
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 1;
+          color: $white;
+          background-color: $primary;
+          svg {
+            color: $white;
+          }
+        }
+        &.active {
+          color: $white;
+          background-color: $primary;
+          font-weight: 700;
+          svg {
+            color: $white;
+          }
+        }
+        span {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            width: 100%;
+            height: 100%;
+            transition: 0.3s ease;
+            color: $gray2;
+            fill: transparent;
+          }
+        }
+        b {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: $red;
+          color: $white;
+          font-size: 12px;
+          line-height: 100%;
+          font-weight: 400;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          display: none;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  &Pro {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 20px 0;
+    margin: 20px 0;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.12),
+      0px 4px 9px rgba(255, 255, 255, 0.11);
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &__content {
+      width: 100%;
+      padding: 16px 16px 0;
+    }
+    h4 {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .button {
+      width: 100%;
+    }
+  }
+  &Profile {
+    padding: 16px 10px 16px 16px;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.12),
+      0px 4px 9px rgba(255, 255, 255, 0.11);
+    &__avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f4f6;
+      margin-right: 9px;
+      overflow: hidden;
+      img {
+        @include fullImage;
+      }
+    }
+    &__name {
+      display: flex;
+      flex-direction: column;
+    }
+    h6 {
+    }
+    a {
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #9095a1;
+      &:hover {
+        opacity: 1;
+        color: $main;
+      }
+    }
+  }
+}
+.burger {
+  display: none;
+}
+// 1024px
+@mixin sidebar-xlg-xxlg  {
+  .sidebar {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    height:calc(100% - 76px);
+    z-index: 9;
+    background: rgba($color: #000000, $alpha: 0.2);
+    visibility: hidden;
+    transition: 0.3s ease;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      .sidebar__inner {
+        @include transformReset;
+      }
+    }
+    &__inner {
+      background-color: $white;
+      width: 100%;
+      max-width: 252px;
+      height: 100%;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: 0.3s ease;
+    }
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    @include transition;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    z-index: 11;
+    align-self: center;
+    &::before {
+      top: 15%;
+      width: 100%;
+      height: 3px;
+      background-color: $primary;
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      left: 50%;
+      @include transformX;
+      border-radius: 3px;
+    }
+    span {
+      top: 50%;
+      width: 100%;
+      height: 3px;
+      background-color: $primary;
+      transition: all 0.3s ease;
+      position: absolute;
+      left: 50%;
+      @include transform;
+      @include transition;
+      border-radius: 3px;
+    }
+    &::after {
+      bottom: 15%;
+      width: 100%;
+      height: 3px;
+      background-color: $primary;
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      left: 50%;
+      @include transformX;
+      border-radius: 3px;
+    }
+    &.active {
+      &::before {
+        background-color: $primary;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &::after {
+        background-color: $primary;
+        bottom: 50%;
+        -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+        transform: translate(-50%, 50%) rotate(-45deg);
+      }
+    }
+  }
+}
+// 650px
+@mixin sidebar-sm-md-extra {
+  .sidebar {
+      top: 64px;
+      height: calc(100% - 64px);
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+    @include transition;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    margin-left: 15px;
+    z-index: 11;
+    align-self: center;
+    &::before {
+      height: 2.5px;
+    }
+    span {
+      height: 2.5px;
+    }
+    &::after {
+      height: 2.5px;
+    }
+  }
+}
+// 540px
+@mixin sidebar-xsm-sm {
+  .sidebar {
+    &__inner {
+      &-buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 30px;
+        .button {
+          width: 100%;
+          margin: 0 0 15px 0;
+          padding: 8px;
+          border-radius: 5px;
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}

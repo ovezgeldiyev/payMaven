@@ -1,0 +1,278 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include intro-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  @include dash-xxxlg-xxxxlg;
+  @include table-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  // @include intro-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  h1,
+  h2 {
+    font-size: 28px;
+    &.big {
+      font-size: 35px;
+    }
+  }
+  @include sidebar-xlg-xxlg;
+  @include intro-xlg-xxlg;
+  @include dash-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  .search {
+    margin-right: 10px;
+  }
+  @include dash-lg-xlg;
+}
+// 930px
+@include md-lg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1,
+  h2 {
+    font-size: 24px;
+    &.big {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  @include table-md-lg;
+  @include info-md-lg;
+  @include dash-md-lg;
+}
+// 840px
+@include md-lg-extra {
+  .status {
+    padding: 20px;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__info {
+      padding-top: 25px;
+    }
+  }
+  .history {
+    padding: 20px 0;
+    &__title {
+      padding: 0 20px;
+    }
+    &__chart {
+      padding: 0 5px;
+    }
+  }
+  @include intro-md-lg-extra;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  .status {
+    padding: 30px;
+  }
+  @include intro-sm-md;
+  @include info-sm-md;
+  @include dash-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  .search {
+    width: auto;
+    margin-right: 10px;
+    &Btn {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      svg {
+        width: 100%;
+        height: 100%;
+        transition: 0.3s ease;
+        color: #323743;
+        fill: transparent;
+      }
+    }
+    &Menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 0 20px;
+      background-color: $white;
+      z-index: 99;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.4s ease;
+      box-shadow: 0px 0px 2px rgba(23, 26, 31, 0.12),
+        0px 0px 1px rgba(23, 26, 31, 0.07);
+      &__inner {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      &.active {
+        max-height: 150px;
+        opacity: 1;
+        padding: 15px 20px;
+      }
+    }
+  }
+  .date {
+    padding: 10px 12px;
+    width: 110px;
+    &::before {
+      width: 7px;
+      height: 7px;
+      right: 12px;
+    }
+    select {
+      font-size: 14px;
+      padding: 8px 36px;
+    }
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  @include sidebar-sm-md-extra;
+  @include dash-sm-md-extra;
+  @include info-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1,
+  h2 {
+    font-size: 22px;
+    &.big {
+      font-size: 25px;
+    }
+  }
+  .button {
+    font-size: 12px;
+    &.uniq {
+      padding: 7px 10px;
+    }
+    svg {
+      width: 13px;
+      height: 13px;
+      margin-right: 4px;
+    }
+  }
+  .upload {
+    padding: 100px 0 80px;
+    &__inner {
+      &-title {
+        margin-bottom: 20px;
+      }
+      &-info {
+        padding-top: 24px;
+        & > p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &Item {
+      margin-bottom: 20px;
+      &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+      }
+      &__progress {
+        width: calc(100% - 80px);
+        &-bar {
+          height: 5px;
+        }
+      }
+      button {
+        width: 20px;
+        height: 20px;
+        margin-left: 12px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .pagination {
+    &__dots {
+      width: 30px;
+      height: 28px;
+    }
+    &__row {
+      span {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    button {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .status {
+    padding: 24px;
+  }
+  .history {
+    padding: 15px 0;
+    &__title {
+      flex-direction: column;
+      padding: 0 15px;
+      h5 {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    &__chart {
+      padding: 0 2px;
+    }
+    &__row {
+      width: 100%;
+      justify-content: flex-end;
+      p {
+        margin-right: 15px;
+        span {
+          width: 10px;
+          height: 10px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  @include intro-xsm-sm;
+  @include table-xsm-sm;
+  @include info-xsm-sm;
+  @include dash-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  // @include intro-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include intro-xxxsm-xxsm;
+}

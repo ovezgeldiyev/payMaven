@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main class="main">
+        <!-- sidebar start
+    =========================================== -->
+        <aside class="sidebar" id="menu">
+            <div class="sidebar__inner">
+                <div class="sidebar__inner-head">
+                    <a href="#" class="logo">
+                        <span>
+                            <img src="./images/sidebar-logo.png" alt="">
+                        </span>
+                        <div class="sidebar__logo-content">
+                            <h5>
+                                DDNM Board
+                            </h5>
+                            <p>
+                                OwnYourLife
+                            </p>
+                        </div>
+                    </a>
+                    <div class="sidebar__inner-nav">
+                        <a href="#" class="active">
+                            <span>
+                                <svg>
+                                    <use xlink:href="#dashboard"></use>
+                                </svg>
+                            </span>
+                            Dashboard
+                            <b>
+                                3
+                            </b>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <svg>
+                                    <use xlink:href="#projects"></use>
+                                </svg>
+                            </span>
+                            Projekte
+                            <b>
+                                3
+                            </b>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <svg>
+                                    <use xlink:href="#partners"></use>
+                                </svg>
+                            </span>
+                            Kunden & Partner
+                            <b>
+                                3
+                            </b>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <svg>
+                                    <use xlink:href="#charts"></use>
+                                </svg>
+                            </span>
+                            Statistik
+                            <b>
+                                3
+                            </b>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <svg>
+                                    <use xlink:href="#api"></use>
+                                </svg>
+                            </span>
+                            API Einstellungen
+                            <b>
+                                3
+                            </b>
+                        </a>
+                        <a href="#" class="notification">
+                            <span>
+                                <svg>
+                                    <use xlink:href="#news"></use>
+                                </svg>
+                            </span>
+                            Nachrichten
+                            <b>
+                                9
+                            </b>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar__inner-foot">
+                    <div class="sidebarPro">
+                        <div class="sidebarPro__image">
+                            <img src="./images/pro-account.svg" alt="">
+                        </div>
+                        <div class="sidebarPro__content">
+                            <h4>
+                                PRO Account
+                            </h4>
+                            <a href="#" class="button secondary">
+                                Upgrade
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebarProfile">
+                        <div class="sidebarProfile__avatar">
+                            <img src="./images/avatar.png" alt="">
+                        </div>
+                        <div class="sidebarProfile__name">
+                            <h6 class="sm">
+                                Achim Falke
+                            </h6>
+                            <a href="#">
+                                company@example.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- sidebar start
+=========================================== -->
+        <!-- dash start
+    =========================================== -->
+        <section class="dash">
+            <div class="dashHeader">
+                <div class="auto__container">
+                    <div class="dashHeader__inner">
+                        <h2>
+                            Dashboard
+                        </h2>
+                        <div class="dashHeader__inner-side">
+                            <div class="date">
+                                <svg>
+                                    <use xlink:href="#calendar"></use>
+                                </svg>
+                                <select name="" id="">
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                            </div>
+                            <div class="burger" id="menuBtn">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="auto__container">
+                <div class="dash__inner">
+                    <div class="dash__inner-row">
+                        <div class="dash__inner-col">
+                            <div class="history">
+                                <div class="history__title">
+                                    <h5>
+                                        Historie
+                                    </h5>
+                                    <div class="history__row">
+                                        <p class="primary">
+                                            <span>
+
+                                            </span>
+                                            Neue Kunden 
+                                        </p>
+                                        <p class="gray">
+                                            <span>
+
+                                            </span>
+                                            Umsätze
+                                        </p>
+                                        <p class="blue">
+                                            <span>
+
+                                            </span>
+                                            Provisionen
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="history__chart">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash__inner-col base">
+                            <div class="dashItem">
+                                <div class="dashItem__icon">
+                                    <svg>
+                                        <use xlink:href="#cart"></use>
+                                    </svg>
+                                </div>
+                                <h6>
+                                    Bestellungen
+                                </h6>
+                                <h2>
+                                    6,452
+                                </h2>
+                                <p>
+                                    <span class="negative">
+                                        0.15%
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="dashItem blue">
+                                <div class="dashItem__icon">
+                                    <svg>
+                                        <use xlink:href="#dollar"></use>
+                                    </svg>
+                                </div>
+                                <h6>
+                                    Umsatz
+                                </h6>
+                                <h2>
+                                    42,502
+                                </h2>
+                                <p>
+                                    <span class="negative">
+                                        0.65%
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="dashItem gray">
+                                <div class="dashItem__icon">
+                                    <svg>
+                                        <use xlink:href="#partner"></use>
+                                    </svg>
+                                </div>
+                                <h6>
+                                    Kunden
+                                </h6>
+                                <h2>
+                                    56,201
+                                </h2>
+                                <p>
+                                    <span class="negative">
+                                        2.29%
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash__inner-row">
+                        <div class="dash__inner-col big">
+                            <div class="dash__inner-title">
+                                <h5>
+                                    Neuste Kunden
+                                </h5>
+                                <a href="#">
+                                    Alle anzeigen
+                                </a>
+                            </div>
+                            <div class="table2__wrapper">
+                                <table class="table2">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Ref-Code
+                                            </th>
+                                            <th>
+                                                Datum
+                                            </th>
+                                            <th>
+                                                Email
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <b>
+                                                    Thomas Mate
+                                                </b>
+                                            </td>
+                                            <td>
+                                                thomas3
+                                            </td>
+                                            <td>
+                                                12.10.2023
+                                            </td>
+                                            <td>
+                                                schreiben
+                                            </td>
+                                            <td>
+                                                <div class="table2__status">
+                                                    <span class="blue">
+                                                        Free
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="table2__dots">
+                                                    <svg>
+                                                        <use xlink:href="#vertical-dots"></use>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>
+                                                    Anna Klein
+                                                </b>
+                                            </td>
+                                            <td>
+                                                annklein
+                                            </td>
+                                            <td>
+                                                12.10.2023
+                                            </td>
+                                            <td>
+                                                schreiben
+                                            </td>
+                                            <td>
+                                                <div class="table2__status">
+                                                    <span class="green">
+                                                        Qualified
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="table2__dots">
+                                                    <svg>
+                                                        <use xlink:href="#vertical-dots"></use>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>
+                                                    John Doe
+                                                </b>
+                                            </td>
+                                            <td>
+                                                superpu
+                                            </td>
+                                            <td>
+                                                10.10.2023
+                                            </td>
+                                            <td>
+                                                schreiben
+                                            </td>
+                                            <td>
+                                                <div class="table2__status">
+                                                    <span class="blue">
+                                                        Free
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="table2__dots">
+                                                    <svg>
+                                                        <use xlink:href="#vertical-dots"></use>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>
+                                                    Harald Wram
+                                                </b>
+                                            </td>
+                                            <td>
+                                                harry01
+                                            </td>
+                                            <td>
+                                                08.10.2023
+                                            </td>
+                                            <td>
+                                                schreiben
+                                            </td>
+                                            <td>
+                                                <div class="table2__status">
+                                                    <span class="blue">
+                                                        Free
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="table2__dots">
+                                                    <svg>
+                                                        <use xlink:href="#vertical-dots"></use>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>
+                                                    Lisa Stone
+                                                </b>
+                                            </td>
+                                            <td>
+                                                shoppa
+                                            </td>
+                                            <td>
+                                                07.10.2023
+                                            </td>
+                                            <td>
+                                                schreiben
+                                            </td>
+                                            <td>
+                                                <div class="table2__status">
+                                                    <span class="gold">
+                                                        Gold III
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="table2__dots">
+                                                    <svg>
+                                                        <use xlink:href="#vertical-dots"></use>
+                                                    </svg>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="dash__inner-foot">
+                                <h6>
+                                    1 - 10 of 145
+                                </h6>
+                                <div class="pagination sm">
+                                    <button>
+                                        <svg>
+                                            <use xlink:href="#chevron-left"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="pagination__row">
+                                        <span class="active">
+                                            1
+                                        </span>
+                                        <span>
+                                            2
+                                        </span>
+                                        <div class="pagination__dots">
+                                            <svg>
+                                                <use xlink:href="#dots"></use>
+                                            </svg>
+                                        </div>
+                                        <span>
+                                            10
+                                        </span>
+                                        <span>
+                                            11
+                                        </span>
+                                    </div>
+                                    <button>
+                                        <svg>
+                                            <use xlink:href="#chevron-left"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash__inner-col">
+                            <div class="status">
+                                <div class="status__title">
+                                    <h5>
+                                        Status
+                                    </h5>
+                                    <button>
+                                        <svg>
+                                            <use xlink:href="#dots-small"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="status__chart">
+                                    <canvas id="chart-doughnut"></canvas>
+                                </div>
+                                <div class="status__info">
+                                    <div class="statusItem">
+                                        <div class="statusItem__name">
+                                            <span>
+                                            </span>
+                                            <p>
+                                                Partner
+                                            </p>
+                                        </div>
+                                        <div class="statusItem__value">
+                                            <h6>
+                                                31.473
+                                            </h6>
+                                            <span>
+                                                20%
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="statusItem light">
+                                        <div class="statusItem__name">
+                                            <span>
+                                            </span>
+                                            <p>
+                                                Kunden
+                                            </p>
+                                        </div>
+                                        <div class="statusItem__value">
+                                            <h6>
+                                                8.092
+                                            </h6>
+                                            <span>
+                                                60%
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="statusItem gray">
+                                        <div class="statusItem__name">
+                                            <span>
+                                            </span>
+                                            <p>
+                                                Free
+                                            </p>
+                                        </div>
+                                        <div class="statusItem__value">
+                                            <h6>
+                                                7.962
+                                            </h6>
+                                            <span>
+                                                20%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- dash end
+=========================================== -->
+    </main>
+    <!-- Sprites
+    =========================================== -->
+    <svg style="display: none">
+        <symbol id="eyeIcon" viewBox="0 0 20 20">
+            <g>
+                <path
+                    d="M2.5 10C2.5 10 5.5 4.5 10 4.5C14.5 4.5 17.5 10 17.5 10C17.5 10 14.5 15.5 10 15.5C5.5 15.5 2.5 10 2.5 10Z"
+                    stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 10C7 8.343 8.343 7 10 7" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M13 10C13 11.657 11.657 13 10 13" stroke="currentColor" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path id="eyeLine" d="M3 17L17 3" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="dashboard" viewBox="0 0 24 25">
+            <g>
+                <path d="M10.2861 3.07141L4.28613 3.07141L4.28613 13.3571L10.2861 13.3571L10.2861 3.07141Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M10.2861 16.7858H4.28613L4.28613 21.9286H10.2861V16.7858Z" stroke="currentColor"
+                    stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M19.7139 3.07141L13.7139 3.07141L13.7139 8.21427L19.7139 8.21427V3.07141Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M19.7139 11.6428L13.7139 11.6428L13.7139 21.9285H19.7139L19.7139 11.6428Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="projects" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M19.7141 21.0714L4.28557 21.0714C3.83092 21.0714 3.39488 20.8908 3.07339 20.5693C2.7519 20.2479 2.57129 19.8118 2.57129 19.3572L2.57129 3.92859L9.42843 3.92859L11.9999 7.35716L21.4284 7.35716L21.4284 19.3572C21.4284 19.8118 21.2478 20.2479 20.9263 20.5693C20.6048 20.8908 20.1688 21.0714 19.7141 21.0714Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="partners" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M6.85015 18.2745L8.74272 19.7C9.17472 20.024 9.42843 20.5314 9.42843 21.0714V21.9285H2.57129V21.0714C2.57129 20.5314 2.825 20.024 3.257 19.7L5.14957 18.2745"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" />
+                <path
+                    d="M6.00042 18.4999C5.05328 18.4999 4.28613 17.7328 4.28613 16.7857L4.28613 15.9285C4.28613 14.9814 5.05328 14.2142 6.00042 14.2142C6.94756 14.2142 7.7147 14.9814 7.7147 15.9285V16.7857C7.7147 17.7328 6.94756 18.4999 6.00042 18.4999Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path
+                    d="M12.8501 7.13171L14.7427 8.55714C15.1747 8.88114 15.4284 9.38857 15.4284 9.92857V10.7857L8.57129 10.7857L8.57129 9.92857C8.57129 9.38857 8.825 8.88114 9.257 8.55714L11.1496 7.13171"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" />
+                <path
+                    d="M12.0004 7.35713C11.0533 7.35713 10.2861 6.58998 10.2861 5.64284V4.7857C10.2861 3.83855 11.0533 3.07141 12.0004 3.07141C12.9476 3.07141 13.7147 3.83855 13.7147 4.7857V5.64284C13.7147 6.58998 12.9476 7.35713 12.0004 7.35713Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path
+                    d="M18.8501 18.2745L20.7427 19.7C21.1747 20.024 21.4284 20.5314 21.4284 21.0714V21.9285H14.5713L14.5713 21.0714C14.5713 20.5314 14.825 20.024 15.257 19.7L17.1496 18.2745"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" />
+                <path
+                    d="M18.0004 18.4999C17.0533 18.4999 16.2861 17.7328 16.2861 16.7857V15.9285C16.2861 14.9814 17.0533 14.2142 18.0004 14.2142C18.9476 14.2142 19.7147 14.9814 19.7147 15.9285V16.7857C19.7147 17.7328 18.9476 18.4999 18.0004 18.4999Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="charts" viewBox="0 0 24 25">
+            <g>
+                <path d="M12 3.07141L12 12.5L21.4286 12.5" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" />
+                <path d="M12.0005 12.5L5.05762 18.9286" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" />
+                <path
+                    d="M11.9999 21.9286C17.2071 21.9286 21.4284 17.7072 21.4284 12.5C21.4284 7.29273 17.2071 3.07141 11.9999 3.07141C6.7926 3.07141 2.57129 7.29273 2.57129 12.5C2.57129 17.7072 6.7926 21.9286 11.9999 21.9286Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="news" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M19.7141 3.92859L4.28557 3.92859C3.33843 3.92859 2.57129 4.69573 2.57129 5.64287L2.57129 15.0714C2.57129 16.0186 3.33843 16.7857 4.28557 16.7857H8.57129L11.9999 21.0714L15.4284 16.7857H19.7141C20.6613 16.7857 21.4284 16.0186 21.4284 15.0714L21.4284 5.64287C21.4284 4.69573 20.6613 3.92859 19.7141 3.92859Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M7.71387 8.21429L16.2853 8.21429" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M7.71387 12.5L12.8567 12.5" stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10"
+                    stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="api" viewBox="0 0 24 25">
+            <g>
+                <path d="M8.57157 7.35712L3.42871 12.5L8.57157 17.6428" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M15.4287 7.35712L20.5716 12.5L15.4287 17.6428" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="cart" viewBox="0 0 20 21">
+            <g>
+                <path
+                    d="M2.5 3L5.5 3L5.5 10.5C5.5 11.328 6.172 12 7 12L14.419 12C15.065 12 15.638 11.587 15.842 10.974L17.5 6L5.5 6"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M6 18C6.82843 18 7.5 17.3284 7.5 16.5C7.5 15.6716 6.82843 15 6 15C5.17157 15 4.5 15.6716 4.5 16.5C4.5 17.3284 5.17157 18 6 18Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M15 18C15.8284 18 16.5 17.3284 16.5 16.5C16.5 15.6716 15.8284 15 15 15C14.1716 15 13.5 15.6716 13.5 16.5C13.5 17.3284 14.1716 18 15 18Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="dollar" viewBox="0 0 20 21">
+            <g>
+                <path d="M10 3L10 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M13.5 5.49999C11.5 4.49199 6 4.03899 6 7.49999C6 11.025 14 9.50499 14 13.5C14 16.887 8.284 16.7 6 15.5"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="partner" viewBox="0 0 20 21">
+            <g>
+                <path
+                    d="M10 13C11.933 13 13.5 11.433 13.5 9.5C13.5 7.567 11.933 6 10 6C8.067 6 6.5 7.567 6.5 9.5C6.5 11.433 8.067 13 10 13Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M8.4998 12.662C8.48763 13.066 8.34953 13.4561 8.10479 13.7777C7.86005 14.0994 7.52091 14.3365 7.1348 14.456L4.8678 15.544C4.77211 15.5842 4.67982 15.632 4.5918 15.687"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M15.408 15.688C15.3199 15.633 15.2276 15.5852 15.132 15.545L12.867 14.457C12.035 14.019 11.502 13.524 11.502 12.663"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M10 18C14.1421 18 17.5 14.6421 17.5 10.5C17.5 6.35786 14.1421 3 10 3C5.85786 3 2.5 6.35786 2.5 10.5C2.5 14.6421 5.85786 18 10 18Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="search" viewBox="0 0 16 17">
+            <g>
+                <path d="M13.9996 14.5L11.5996 12.1" stroke="currentColor" stroke-width="0.8" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M6.8 12.1C9.45097 12.1 11.6 9.95097 11.6 7.3C11.6 4.64903 9.45097 2.5 6.8 2.5C4.14903 2.5 2 4.64903 2 7.3C2 9.95097 4.14903 12.1 6.8 12.1Z"
+                    stroke="currentColor" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="bell" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M18.0001 11.6428V9.07141C18.0001 7.48011 17.368 5.95399 16.2428 4.82877C15.1176 3.70355 13.5914 3.07141 12.0001 3.07141C10.4088 3.07141 8.88272 3.70355 7.7575 4.82877C6.63228 5.95399 6.00014 7.48011 6.00014 9.07141V11.6428C6.00014 14.4714 3.42871 15.1571 3.42871 16.7857C3.42871 18.2428 6.77157 19.3571 12.0001 19.3571C17.2287 19.3571 20.5716 18.2428 20.5716 16.7857C20.5716 15.1571 18.0001 14.4714 18.0001 11.6428Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path
+                    d="M11.9999 21.0714C11.1333 21.0714 10.319 21.0423 9.55273 20.9857C9.7161 21.5068 10.0416 21.9622 10.4817 22.2855C10.9219 22.6088 11.4537 22.7831 11.9999 22.7831C12.546 22.7831 13.0779 22.6088 13.518 22.2855C13.9582 21.9622 14.2837 21.5068 14.447 20.9857C13.6807 21.0423 12.8664 21.0714 11.9999 21.0714Z"
+                    fill="currentColor" />
+            </g>
+        </symbol>
+        <symbol id="help" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M9.42871 5.46289C11.8244 4.40432 14.9247 4.52946 15.9841 6.24375C17.0427 7.95718 16.3124 9.95004 14.497 11.4886C12.6816 13.0272 12.0001 13.862 12.0001 15.0715"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path
+                    d="M11.9996 21.0714C12.7097 21.0714 13.2853 20.4958 13.2853 19.7857C13.2853 19.0756 12.7097 18.5 11.9996 18.5C11.2895 18.5 10.7139 19.0756 10.7139 19.7857C10.7139 20.4958 11.2895 21.0714 11.9996 21.0714Z"
+                    fill="currentColor" />
+            </g>
+        </symbol>
+        <symbol id="doc" viewBox="0 0 24 25">
+            <g>
+                <path d="M14.5713 3.07141L14.5713 8.21427H19.7141L14.5713 3.07141Z" fill="currentColor" />
+                <path d="M14.5713 3.07141L14.5713 8.21427H19.7141" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" />
+                <path
+                    d="M14.5718 3.07141L4.28613 3.07141L4.28613 21.9286L19.7147 21.9286L19.7147 8.21427L14.5718 3.07141Z"
+                    stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10" stroke-linecap="square" />
+                <path d="M7.71387 8.21429H11.1424" stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10"
+                    stroke-linecap="square" />
+                <path d="M7.71387 12.5L16.2853 12.5" stroke="currentColor" stroke-width="2.05714" stroke-miterlimit="10"
+                    stroke-linecap="square" />
+                <path d="M7.71387 16.7857L16.2853 16.7857" stroke="currentColor" stroke-width="2.05714"
+                    stroke-miterlimit="10" stroke-linecap="square" />
+            </g>
+        </symbol>
+        <symbol id="export" viewBox="0 0 16 17">
+            <g>
+                <path d="M8 11.3L8 2.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M11.6004 6.1L8.00039 2.5L4.40039 6.1" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 14.5L2 14.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="import" viewBox="0 0 16 17">
+            <g>
+                <path
+                    d="M11.6004 8.09999L8.00039 12.1L4.40039 8.09999H6.80039L6.80039 3.29999L9.20039 3.29999L9.20039 8.09999H11.6004Z"
+                    stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M11.6 6.5L12.8 6.5C13.1183 6.5 13.4235 6.62643 13.6485 6.85147C13.8736 7.07652 14 7.38174 14 7.7L14 12.5C14 12.8183 13.8736 13.1235 13.6485 13.3485C13.4235 13.5736 13.1183 13.7 12.8 13.7L3.2 13.7C2.88174 13.7 2.57652 13.5736 2.35147 13.3485C2.12643 13.1235 2 12.8183 2 12.5L2 7.7C2 7.38174 2.12643 7.07652 2.35147 6.85147C2.57652 6.62643 2.88174 6.5 3.2 6.5L4.4 6.5"
+                    stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="edit" viewBox="0 0 21 21">
+            <g>
+                <path d="M12.2705 5.85498L15.2705 8.85498" stroke="currentColor" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14.2705 3.85498L17.2705 6.85498L7.27051 16.855L3.27051 17.855L4.27051 13.855L14.2705 3.85498Z"
+                    stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="chevron-left" viewBox="0 0 12 13">
+            <g>
+                <path d="M8.30455 2.80454L7.5 2L3 6.5L7.5 11L8.30455 10.1954L4.60909 6.5L8.30455 2.80454Z"
+                    fill="currentColor" />
+            </g>
+        </symbol>
+        <symbol id="dots" viewBox="0 0 12 13">
+            <g>
+                <path
+                    d="M2.14328 6.92858C2.61666 6.92858 3.00042 6.54482 3.00042 6.07144C3.00042 5.59805 2.61666 5.21429 2.14328 5.21429C1.66989 5.21429 1.28613 5.59805 1.28613 6.07144C1.28613 6.54482 1.66989 6.92858 2.14328 6.92858Z"
+                    stroke="currentColor" stroke-width="0.857143" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M9.85714 6.92858C10.3305 6.92858 10.7143 6.54482 10.7143 6.07144C10.7143 5.59805 10.3305 5.21429 9.85714 5.21429C9.38376 5.21429 9 5.59805 9 6.07144C9 6.54482 9.38376 6.92858 9.85714 6.92858Z"
+                    stroke="currentColor" stroke-width="0.857143" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M5.99972 6.92858C6.47311 6.92858 6.85686 6.54482 6.85686 6.07144C6.85686 5.59805 6.47311 5.21429 5.99972 5.21429C5.52633 5.21429 5.14258 5.59805 5.14258 6.07144C5.14258 6.54482 5.52633 6.92858 5.99972 6.92858Z"
+                    stroke="currentColor" stroke-width="0.857143" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="calendar" viewBox="0 0 16 17">
+            <g>
+                <path d="M2 6.5L14 6.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path
+                    d="M12.8 4.09998L3.2 4.09998C2.88174 4.09998 2.57652 4.2264 2.35147 4.45145C2.12643 4.67649 2 4.98172 2 5.29998L2 12.5C2 12.8182 2.12643 13.1235 2.35147 13.3485C2.57652 13.5735 2.88174 13.7 3.2 13.7L12.8 13.7C13.1183 13.7 13.4235 13.5735 13.6485 13.3485C13.8736 13.1235 14 12.8182 14 12.5L14 5.29998C14 4.98172 13.8736 4.67649 13.6485 4.45145C13.4235 4.2264 13.1183 4.09998 12.8 4.09998Z"
+                    stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5.2002 2.5V4.1" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M10.7998 2.5V4.1" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="vertical-dots" viewBox="0 0 25 24">
+            <g>
+                <path
+                    d="M12.415 7.98999C13.515 7.98999 14.415 7.08999 14.415 5.98999C14.415 4.88999 13.515 3.98999 12.415 3.98999C11.315 3.98999 10.415 4.88999 10.415 5.98999C10.415 7.08999 11.315 7.98999 12.415 7.98999ZM12.415 9.98999C11.315 9.98999 10.415 10.89 10.415 11.99C10.415 13.09 11.315 13.99 12.415 13.99C13.515 13.99 14.415 13.09 14.415 11.99C14.415 10.89 13.515 9.98999 12.415 9.98999ZM12.415 15.99C11.315 15.99 10.415 16.89 10.415 17.99C10.415 19.09 11.315 19.99 12.415 19.99C13.515 19.99 14.415 19.09 14.415 17.99C14.415 16.89 13.515 15.99 12.415 15.99Z"
+                    fill="currentColor" />
+            </g>
+        </symbol>
+        <symbol id="dots-small" viewBox="0 0 16 17">
+            <g>
+                <path d="M8.75 8.5C8.75 8.64834 8.70601 8.79334 8.6236 8.91668C8.54119 9.04002 8.42406 9.13614 8.28701 9.19291C8.14997 9.24968 7.99917 9.26453 7.85368 9.23559C7.7082 9.20665 7.57456 9.13522 7.46967 9.03033C7.36478 8.92544 7.29335 8.7918 7.26441 8.64632C7.23547 8.50083 7.25032 8.35003 7.30709 8.21299C7.36386 8.07594 7.45999 7.95881 7.58332 7.8764C7.70666 7.79399 7.85166 7.75 8 7.75C8.19891 7.75 8.38968 7.82902 8.53033 7.96967C8.67098 8.11032 8.75 8.30109 8.75 8.5ZM8 5C8.14834 5 8.29334 4.95601 8.41668 4.8736C8.54001 4.79119 8.63614 4.67406 8.69291 4.53701C8.74968 4.39997 8.76453 4.24917 8.73559 4.10368C8.70665 3.9582 8.63522 3.82456 8.53033 3.71967C8.42544 3.61478 8.2918 3.54335 8.14632 3.51441C8.00083 3.48547 7.85003 3.50032 7.71299 3.55709C7.57594 3.61386 7.45881 3.70999 7.3764 3.83332C7.29399 3.95666 7.25 4.10166 7.25 4.25C7.25 4.44891 7.32902 4.63968 7.46967 4.78033C7.61032 4.92098 7.80109 5 8 5ZM8 12C7.85166 12 7.70666 12.044 7.58332 12.1264C7.45999 12.2088 7.36386 12.3259 7.30709 12.463C7.25032 12.6 7.23547 12.7508 7.26441 12.8963C7.29335 13.0418 7.36478 13.1754 7.46967 13.2803C7.57456 13.3852 7.7082 13.4567 7.85368 13.4856C7.99917 13.5145 8.14997 13.4997 8.28701 13.4429C8.42406 13.3861 8.54119 13.29 8.6236 13.1667C8.70601 13.0433 8.75 12.8983 8.75 12.75C8.75 12.5511 8.67098 12.3603 8.53033 12.2197C8.38968 12.079 8.19891 12 8 12Z" fill="currentColor"/>
+            </g>
+        </symbol>
+    </svg>
+    <!-- js
+    =========================================== -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/chart.min.js"></script>
+    <script src="./js/charts.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
